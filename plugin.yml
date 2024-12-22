@@ -4,6 +4,7 @@ version: 1.0.1-BETA
 api: [5.0.0]
 author: VsrStudio
 description: Plugin untuk top-up rank manual dengan fitur auto-grant dan validasi
+website: https://github.com/VsrStudio
 commands:
   topuprank:
     description: Buka menu top-up rank
