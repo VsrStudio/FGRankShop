@@ -23,6 +23,17 @@ class Main extends PluginBase {
 
         $this->orderManager = new OrderManager($this);
         $this->rankManager = new RankManager($this);
+
+                $pluginName = $this->getDescription()->getName();
+        $map = $this->getDescription()->getAuthors();
+        $ver = $this->getDescription()->getVersion();
+
+        if (isset($map[0])) {
+            if ($pluginName !== "TopupRank" or $map[0] !== "VsrStudio" or $ver !== "1.0.1-BETA") {
+                $this->getLogger()->emergency("§cPlugin info for $pluginName has been changed. Please restore the correct plugin.yml: author should be \"VsrStudio\", version should be \"1.0.1-BETA\", and plugin name should be \"TopupRank\".");
+                $this->getServer()->shutdown();
+            }
+        }
     }
 
     public function onCommand(CommandSender $sender, Command $command, string $label, array $args): bool {
