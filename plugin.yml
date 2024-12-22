@@ -7,12 +7,12 @@ description: Plugin untuk top-up rank manual dengan fitur auto-grant dan validas
 commands:
   topuprank:
     description: Buka menu top-up rank
-    permission: topuprank.vsr
+    permission: topuprank.use
   rankadmin:
     description: Buka menu admin top-up rank
     permission: topuprank.admin
 permissions:
-  topuprank.vsr:
+  topuprank.use:
     default: true
   topuprank.admin:
     default: op
