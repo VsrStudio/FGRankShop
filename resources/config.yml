@@ -1,0 +1,19 @@
+ranks:
+  VIP: 50000
+  VIP+: 100000
+  MVP: 150000
+  MVP+: 200000
+  MVP++: 250000
+
+payment_methods:
+  - GoPay
+  - DANA
+  - OVO
+
+messages:
+  rank_purchased: "Terima kasih! Permintaan top-up Anda sedang diproses oleh admin."
+  notify_admin: "Pemain %player% telah meminta top-up rank %rank% menggunakan metode %method%."
+  invalid_phone: "Nomor telepon tidak valid. Masukkan nomor telepon yang benar."
+  invalid_gamertag: "Nama gamertag tidak valid. Masukkan nama yang benar."
+  payment_success: "Pembayaran berhasil diproses. Rank %rank% telah diberikan kepada pemain."
+  payment_rejected: "Pembayaran ditolak oleh admin."
