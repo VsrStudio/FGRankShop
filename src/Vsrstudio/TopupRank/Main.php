@@ -24,7 +24,7 @@ class Main extends PluginBase {
         $this->orderManager = new OrderManager($this);
         $this->rankManager = new RankManager($this);
 
-                $pluginName = $this->getDescription()->getName();
+        $pluginName = $this->getDescription()->getName();
         $map = $this->getDescription()->getAuthors();
         $ver = $this->getDescription()->getVersion();
 
