@@ -1,5 +1,6 @@
 ## About
 ~FGRankShop~ -> TopupRank
+Plugin ini adalah reinkarnasi dari FGRankShop yang sempruna **TopupRank**
 
 ## Warning
 ```yaml
