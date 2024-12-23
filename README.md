@@ -1,6 +1,8 @@
 ## About
 ~FGRankShop~ -> TopupRank
 - Plugin ini adalah reinkarnasi dari FGRankShop yang sempruna **TopupRank**
+- Plugin Ini Masih Dalam Tahap Pengembangan Jika Ada Bug Atau Eror Bisa Open Issue Atau Discord
+![Download Link]()
 
 ## Warning
 ```yaml
