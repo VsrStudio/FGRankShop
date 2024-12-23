@@ -2,7 +2,7 @@
 ~FGRankShop~ -> TopupRank
 - Plugin ini adalah reinkarnasi dari FGRankShop yang sempruna **TopupRank**
 - Plugin Ini Masih Dalam Tahap Pengembangan Jika Ada Bug Atau Eror Bisa Open Issue Atau Discord
-![Download Link]()
+- [Download Link](https://github.com/VsrStudio/TopupRank/archive/refs/heads/main.zip)
 
 ## Warning
 ```yaml
