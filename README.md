@@ -4,7 +4,7 @@
 - Plugin Ini Masih Dalam Tahap Pengembangan Jika Ada Bug Atau Eror Bisa Open Issue Atau Discord
 - [Download Link](https://github.com/VsrStudio/TopupRank/archive/refs/heads/main.zip)
 - Dependencies [RankSystem] [FormAPI]
-
+- Data Permintaan Tersimpan Di plugin_data -> topuprank -> order.json & order_log.txt
 ## Warning
 ```yaml
 Name: TopupRank
