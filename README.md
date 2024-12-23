@@ -4,7 +4,6 @@
 - Plugin Ini Masih Dalam Tahap Pengembangan Jika Ada Bug Atau Eror Bisa Open Issue Atau Discord
 - [Download Link](https://github.com/VsrStudio/TopupRank/archive/refs/heads/main.zip)
 - Dependencies [RankSystem] [FormAPI]
-- Data Permintaan Tersimpan Di plugin_data -> topuprank -> order.json & order_log.txt
 ## Warning
 ```yaml
 Name: TopupRank
@@ -12,6 +11,23 @@ Author: VsrStudio
 Version: 1.0.1-BETA
 ```
 Jangan menghapus atau mengganti salah satu code di atas jika di hapus sever akan tershotdown
+
+## Config
+- Data Permintaan/Order Tersimpan Di plugin_data -> topuprank -> order.json & order_log.txt
+-Open Config.yml
+```yaml
+ranks:
+  VIP: 50000
+  VIP+: 100000
+  MVP: 150000
+  MVP+: 200000
+  MVP++: 250000
+
+payment_methods:
+  - GoPay
+  - DANA
+  - OVO
+```
 
 ## Command
 - /topuprank Open the top up rank menu
