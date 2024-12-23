@@ -3,7 +3,10 @@
 - Plugin ini adalah reinkarnasi dari FGRankShop yang sempruna **TopupRank**
 - Plugin Ini Masih Dalam Tahap Pengembangan Jika Ada Bug Atau Eror Bisa Open Issue Atau Discord
 - [Download Link](https://github.com/VsrStudio/TopupRank/archive/refs/heads/main.zip)
-- Dependencies [RankSystem] [FormAPI]
+# Dependencies
+- [TopupRankAPI](https://github.com/VsrStudio/TopupRankAPI)
+- [RankSystem](https://github.com/IvanCraft623/RankSystem)
+- [FormAPI](https://github.com/jojoe77777/FormAPI)
 ## Warning
 ```yaml
 Name: TopupRank
