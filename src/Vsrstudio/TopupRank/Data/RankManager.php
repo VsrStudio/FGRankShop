@@ -4,15 +4,23 @@ namespace VsrStudio\TopupRank\Data;
 
 use pocketmine\Server;
 
-class RankManager {
+class TopupRankManager {
 
     public function grantRank(string $gamertag, string $rank): void {
-        $player = Server::getInstance()->getPlayerByPrefix($gamertag);
+        $server = Server::getInstance();
+        
+        $command = "ranksystem setrank $gamertag $rank";
 
+        $server->dispatchCommand($server->getConsoleSender(), $command);
+
+        $player = $server->getPlayerByPrefix($gamertag);
         if ($player !== null) {
             $player->sendMessage("Selamat! Anda telah menerima rank $rank.");
         }
+    }
 
-        // Logika tambahan jika ada plugin lain yang mengatur rank
+    public function isValidRank(string $rank): bool {
+        $ranks = Server::getInstance()->getPluginManager()->getPlugin("RankSystem")->getConfig()->get("ranks", []);
+        return in_array($rank, array_keys($ranks), true);
     }
 }
