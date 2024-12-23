@@ -27,7 +27,7 @@ ranks:
   MVP++: 250000
 
 payment_methods:
-  - GoPay
+  - Paypal
   - DANA
   - OVO
 ```
