@@ -9,12 +9,12 @@ use pocketmine\player\Player;
 use VsrStudio\TopupRank\Forms\TopupForm;
 use VsrStudio\TopupRank\Forms\AdminForm;
 use VsrStudio\TopupRank\Data\OrderManager;
-use VsrStudio\TopupRank\Data\RankManager;
+use VsrStudio\TopupRank\Data\TopupRankManager;
 
 class Main extends PluginBase {
 
     private OrderManager $orderManager;
-    private RankManager $rankManager;
+    private TopupRankManager $rankManager;
     private array $config;
 
     public function onEnable(): void {
@@ -22,7 +22,7 @@ class Main extends PluginBase {
         $this->config = $this->getConfig()->getAll();
 
         $this->orderManager = new OrderManager($this);
-        $this->rankManager = new RankManager($this);
+        $this->rankManager = new TopupRankManager($this);
 
         $pluginName = $this->getDescription()->getName();
         $map = $this->getDescription()->getAuthors();
@@ -74,7 +74,7 @@ class Main extends PluginBase {
         return $this->orderManager;
     }
 
-    public function getRankManager(): RankManager {
+    public function getRankManager(): TopupRankManager {
         return $this->rankManager;
     }
 
