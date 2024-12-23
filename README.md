@@ -15,4 +15,8 @@ Jangan menghapus atau mengganti salah satu code di atas jika di hapus sever akan
 - /rankadmin Open the form admin
 
 ## Screenshot
-![Menu Rank](images/Screenshot_20241223-101251.png)
+![Menu Rank](image/Screenshot_20241223-101251.png)
+![Formulir Rank](image/Screenshot_20241223-101258.png)
+![Tampilan Admin Menu](image/Screenshot_20241223-101317.png)
+![Tampilan Forumlir Admin](image/Screenshot_20241223-101346.png)
+![Menu Konfirmasi](image/Screenshot_20241223-101355.png)
