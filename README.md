@@ -13,3 +13,6 @@ Jangan menghapus atau mengganti salah satu code di atas jika di hapus sever akan
 ## Command
 - /topuprank Open the top up rank menu
 - /rankadmin Open the form admin
+
+## Screenshot
+![Menu Rank](images/Screenshot_20241223-101251.png)
