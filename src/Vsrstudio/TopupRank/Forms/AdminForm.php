@@ -18,6 +18,37 @@ class AdminForm {
         $form = new SimpleForm(function (Player $player, $data) {
             if ($data === null) return;
 
+            switch ($data) {
+                case 0:
+                    $apiKey = $this->plugin->getAPIKeyManager()->getAPIKey();
+                    if ($apiKey === null) {
+                        $player->sendMessage("§eAPI Key belum dibuat. Silakan restart server.");
+                    } else {
+                        $player->sendMessage("§aAPI Key Anda: §b$apiKey");
+                    }
+                    break;
+
+                case 1:
+                    $this->showOrderList($player);
+                    break;
+
+                default:
+                    break;
+            }
+        });
+
+        $form->setTitle("Menu Admin - Topup Rank");
+        $form->setContent("Pilih opsi yang tersedia:");
+        $form->addButton("Lihat API Key");
+        $form->addButton("Daftar Permintaan");
+
+        return $form;
+    }
+
+    private function showOrderList(Player $player): void {
+        $form = new SimpleForm(function (Player $player, $data) {
+            if ($data === null) return;
+
             $orders = $this->plugin->getOrderManager()->getOrders();
             if (isset($orders[$data])) {
                 $order = $orders[$data];
@@ -25,18 +56,18 @@ class AdminForm {
             }
         });
 
-        $form->setTitle("Menu Admin - Topup Rank");
+        $form->setTitle("Daftar Permintaan");
         $orders = $this->plugin->getOrderManager()->getOrders();
 
         if (empty($orders)) {
-            $form->setContent("Tidak ada permintaan top-up saat ini.");
+            $form->setContent("§cTidak ada permintaan top-up saat ini.");
         } else {
             foreach ($orders as $index => $order) {
                 $form->addButton("Gamertag: " . $order["gamertag"] . "\nRank: " . $order["rank"] . "\nMetode: " . $order["method"]);
             }
         }
 
-        return $form;
+        $player->sendForm($form);
     }
 
     private function showOrderDetails(Player $player, array $order): void {
@@ -44,14 +75,15 @@ class AdminForm {
             if ($data === null) return;
 
             switch ($data) {
-                case 0: // Setujui
+                case 0:
                     $this->plugin->getOrderManager()->approveOrder($order);
                     $this->plugin->getRankManager()->grantRank($order["gamertag"], $order["rank"]);
-                    $player->sendMessage("Permintaan disetujui. Rank telah diberikan kepada pemain.");
+                    $player->sendMessage("§aPermintaan disetujui. Rank telah diberikan kepada pemain.");
                     break;
-                case 1: // Tolak
+
+                case 1:
                     $this->plugin->getOrderManager()->rejectOrder($order);
-                    $player->sendMessage("Permintaan ditolak.");
+                    $player->sendMessage("§cPermintaan ditolak.");
                     break;
             }
         });
