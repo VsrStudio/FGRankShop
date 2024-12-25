@@ -10,11 +10,13 @@ use VsrStudio\TopupRank\Forms\TopupForm;
 use VsrStudio\TopupRank\Forms\AdminForm;
 use VsrStudio\TopupRank\Data\OrderManager;
 use VsrStudio\TopupRank\Data\TopupRankManager;
+use VsrStudio\TopupRank\Data\APIKeyManager;
 
 class Main extends PluginBase {
 
     private OrderManager $orderManager;
     private TopupRankManager $rankManager;
+    private APIKeyManager $apiKeyManager;
     private array $config;
 
     public function onEnable(): void {
@@ -23,6 +25,7 @@ class Main extends PluginBase {
 
         $this->orderManager = new OrderManager($this);
         $this->rankManager = new TopupRankManager($this);
+        $this->apiKeyManager = new APIKeyManager($this);
 
         $pluginName = $this->getDescription()->getName();
         $map = $this->getDescription()->getAuthors();
@@ -67,6 +70,21 @@ class Main extends PluginBase {
             return true;
         }
 
+        if ($command->getName() === "createapikey") {
+            if ($sender instanceof Player) {
+                if (!$sender->hasPermission("topuprank.createapikey")) {
+                    $sender->sendMessage("§cAnda tidak memiliki izin untuk menggunakan perintah ini.");
+                    return true;
+                }
+
+                $apiKey = $this->apiKeyManager->createAPIKey();
+                $sender->sendMessage("§aAPI Key baru telah dibuat: §b$apiKey");
+            } else {
+                $sender->sendMessage("Perintah ini hanya dapat digunakan oleh pemain.");
+            }
+            return true;
+        }
+
         return false;
     }
 
@@ -80,5 +98,9 @@ class Main extends PluginBase {
 
     public function getPluginConfig(): array {
         return $this->config;
+    }
+
+    public function getAPIKeyManager(): APIKeyManager {
+        return $this->apiKeyManager;
     }
 }
