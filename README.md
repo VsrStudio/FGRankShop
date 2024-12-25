@@ -17,7 +17,11 @@ Jangan menghapus atau mengganti salah satu code di atas jika di hapus sever akan
 
 ## Config
 - Data Permintaan/Order Tersimpan Di plugin_data -> topuprank -> order.json & order_log.txt
--Open Config.yml
+# Contoh api_keys.yml
+```yaml
+api_key: "abcd1234efgh5678ijkl9012mnop3456"
+```
+- Open Config.yml
 ```yaml
 ranks:
   VIP: 50000
