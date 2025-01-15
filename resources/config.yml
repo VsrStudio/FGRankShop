@@ -1,9 +1,28 @@
 ranks:
-  VIP: 50000
-  VIP+: 100000
-  MVP: 150000
-  MVP+: 200000
-  MVP++: 250000
+  §eELITE:
+    price: 15.000
+    description: ""
+    image: "textures/ui/promo_bee"
+  §aVIP:
+    price: 20.000
+    description: ""
+    image: "textures/ui/promo_spider"
+  §bMVP:
+    price: 30.000
+    description: "Rank premium dengan fitur khusus."
+    image: "textures/ui/promo_chicken"
+  §0Legends:
+    price: 40.000
+    description: ""
+    image: "textures/ui/promo_wolf"
+  §1Angel:
+    price: 60.000
+    description: ""
+    image: "textures/ui/promo_creeper"
+  §dExCluSive:
+    price: 80.000
+    description: ""
+    image: "textures/ui/realms_key_art"
 
 payment_methods:
   - GoPay
