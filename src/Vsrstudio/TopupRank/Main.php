@@ -1,16 +1,16 @@
 <?php
 
-namespace VsrStudio\TopupRank;
+namespace Vsrstudio\TopupRank;
 
 use pocketmine\plugin\PluginBase;
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
 use pocketmine\player\Player;
-use VsrStudio\TopupRank\Forms\TopupForm;
-use VsrStudio\TopupRank\Forms\AdminForm;
-use VsrStudio\TopupRank\Data\OrderManager;
-use VsrStudio\TopupRank\Data\TopupRankManager;
-use VsrStudio\TopupRank\Data\APIKeyManager;
+use Vsrstudio\TopupRank\Forms\TopupForm;
+use Vsrstudio\TopupRank\Forms\AdminForm;
+use Vsrstudio\TopupRank\Data\OrderManager;
+use Vsrstudio\TopupRank\Data\TopupRankManager;
+use Vsrstudio\TopupRank\Data\APIKeyManager;
 
 class Main extends PluginBase {
 
