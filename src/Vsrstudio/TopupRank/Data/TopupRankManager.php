@@ -1,6 +1,6 @@
 <?php
 
-namespace VsrStudio\TopupRank\Data;
+namespace Vsrstudio\TopupRank\Data;
 
 use pocketmine\Server;
 
