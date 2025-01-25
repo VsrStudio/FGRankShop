@@ -1,11 +1,11 @@
 <?php
 
-namespace VsrStudio\TopupRank\Forms;
+namespace Vsrstudio\TopupRank\Forms;
 
 use jojoe77777\FormAPI\CustomForm;
 use jojoe77777\FormAPI\SimpleForm;
 use pocketmine\player\Player;
-use VsrStudio\TopupRank\Main;
+use Vsrstudio\TopupRank\Main;
 
 class TopupForm {
 
