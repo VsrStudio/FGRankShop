@@ -1,8 +1,8 @@
 <?php
 
-namespace VsrStudio\TopupRank\Data;
+namespace Vsrstudio\TopupRank\Data;
 
-use VsrStudio\TopupRank\Main;
+use Vsrstudio\TopupRank\Main;
 
 class APIKeyManager {
 
