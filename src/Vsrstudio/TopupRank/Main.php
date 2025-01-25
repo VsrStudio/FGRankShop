@@ -10,7 +10,7 @@ use Vsrstudio\TopupRank\Forms\TopupForm;
 use Vsrstudio\TopupRank\Forms\AdminForm;
 use Vsrstudio\TopupRank\Data\OrderManager;
 use Vsrstudio\TopupRank\Data\TopupRankManager;
-use Vsrstudio\TopupRank\Data\APIKeyManager;
+use Vsrstudio\TopupRank\Data\ApiKeyManager;
 
 class Main extends PluginBase {
 
