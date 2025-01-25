@@ -1,6 +1,6 @@
 <?php
 
-namespace VsrStudio\TopupRank\Forms;
+namespace Vsrstudio\TopupRank\Forms;
 
 use jojoe77777\FormAPI\ModalForm;
 use pocketmine\player\Player;
