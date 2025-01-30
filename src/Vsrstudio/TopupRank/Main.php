@@ -10,22 +10,27 @@ use Vsrstudio\TopupRank\Forms\TopupForm;
 use Vsrstudio\TopupRank\Forms\AdminForm;
 use Vsrstudio\TopupRank\Data\OrderManager;
 use Vsrstudio\TopupRank\Data\TopupRankManager;
-use Vsrstudio\TopupRank\Data\ApiKeyManager;
+use Vsrstudio\TopupRank\Data\APIKeyManager;
+use Vsrstudio\TopupRank\Data\LangManager;
 
 class Main extends PluginBase {
 
     private OrderManager $orderManager;
     private TopupRankManager $rankManager;
     private APIKeyManager $apiKeyManager;
+    private LangManager $langManager;
     private array $config;
 
     public function onEnable(): void {
         $this->saveDefaultConfig();
+        $langDir = $this->getDataFolder() . "lang/";
+        $defaultLang = $this->getConfig()->get("default_language", "en");
         $this->config = $this->getConfig()->getAll();
 
         $this->orderManager = new OrderManager($this);
         $this->rankManager = new TopupRankManager($this);
         $this->apiKeyManager = new APIKeyManager($this);
+        $this->langManager = new LangManager($langDir, $defaultLang);
 
         $pluginName = $this->getDescription()->getName();
         $map = $this->getDescription()->getAuthors();
@@ -98,6 +103,10 @@ class Main extends PluginBase {
 
     public function getPluginConfig(): array {
         return $this->config;
+    }
+
+    public function getLangManager(): LangManager {
+        return $this->langManager;
     }
 
     public function getAPIKeyManager(): APIKeyManager {
