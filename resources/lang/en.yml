@@ -1,0 +1,7 @@
+title: "Top-up Rank"
+content: "Choose the rank you want to buy:"
+rank_description: "Rank: {rank}\nPrice: Rp{price}\nDescription: {description}"
+invalid_phone: "Invalid phone number. Please try again."
+invalid_gamertag: "Invalid gamertag. Please try again."
+rank_purchased: "Congratulations! You have successfully purchased the rank {rank}."
+notify_admin: "{player} has purchased rank {rank} using {method}."
