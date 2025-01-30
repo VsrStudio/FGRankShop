@@ -18,14 +18,25 @@ class TopupForm {
     public function getForm(): SimpleForm {
         $form = new SimpleForm(function (Player $player, $data) {
             if ($data === null) return;
+            
+            $ranks = $this->plugin->getPluginConfig()["ranks"];
+            $rankNames = array_keys($ranks);
+            $selectedRank = $rankNames[$data] ?? null;
 
-            $this->showCustomForm($player, $data);
+            if ($selectedRank !== null) {
+                $this->showCustomForm($player, $selectedRank);
+            }
         });
 
         $form->setTitle("Top-up Rank");
-        $form->setContent("Pilih rank yang ingin Anda beli:");
-        foreach ($this->plugin->getPluginConfig()["ranks"] as $rank => $price) {
-            $form->addButton("$rank\nHarga: Rp$price");
+        $form->setContent("Hubungi Admin\n- 085859108355\n- 085711051518\nPilih rank yang ingin Anda beli:");
+
+        foreach ($this->plugin->getPluginConfig()["ranks"] as $rank => $details) {
+            $price = $details["price"];
+            $description = $details["description"];
+            $image = $details["image"];
+
+            $form->addButton("$rank\nHarga: Rp$price\n$description", 0, $image);
         }
 
         return $form;
