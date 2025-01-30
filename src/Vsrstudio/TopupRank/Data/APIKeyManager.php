@@ -4,7 +4,7 @@ namespace Vsrstudio\TopupRank\Data;
 
 use Vsrstudio\TopupRank\Main;
 
-class ApiKeyManager {
+class APIKeyManager {
 
     private Main $plugin;
 
