@@ -1,0 +1,7 @@
+title: "Top-up Rank"
+content: "Pilih rank yang ingin Anda beli:"
+rank_description: "Rank: {rank}\nHarga: Rp{price}\nDeskripsi: {description}"
+invalid_phone: "Nomor telepon tidak valid. Silakan coba lagi."
+invalid_gamertag: "Gamertag tidak valid. Silakan coba lagi."
+rank_purchased: "Selamat! Anda berhasil membeli rank {rank}."
+notify_admin: "{player} telah membeli rank {rank} menggunakan {method}."
