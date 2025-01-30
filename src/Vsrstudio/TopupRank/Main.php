@@ -23,9 +23,13 @@ class Main extends PluginBase {
 
     public function onEnable(): void {
         $this->saveDefaultConfig();
+        $this->config = $this->getConfig()->getAll();
         $langDir = $this->getDataFolder() . "lang/";
         $defaultLang = $this->getConfig()->get("default_language", "en");
-        $this->config = $this->getConfig()->getAll();
+        
+        @mkdir($this->getDataFolder() . "lang/");
+        $this->saveResource("lang/en.yml");
+        $this->saveResource("lang/id.yml");
 
         $this->orderManager = new OrderManager($this);
         $this->rankManager = new TopupRankManager($this);
