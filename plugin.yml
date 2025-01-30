@@ -1,16 +1,16 @@
 name: TopupRank
 main: Vsrstudio\TopupRank\Main
-version: 1.0.1-BETA
+version: 1.2.0-BETA
 api: [5.0.0]
 author: VsrStudio
-description: Plugin untuk top-up rank manual dengan fitur auto-grant dan validasi
+description: TopupRank Sistem
 website: https://github.com/VsrStudio
 commands:
   topuprank:
-    description: Buka menu top-up rank
+    description: Open the rank top-up menu
     permission: topuprank.use
   rankadmin:
-    description: Buka menu admin top-up rank
+    description: Open the rank top-up menu
     permission: topuprank.admin
 permissions:
   topuprank.use:
